@@ -13,7 +13,9 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Compress
-        run: find . -mindepth 1 -type d -not -path "./.git*" -print0 | xargs -0 -I % sh -c 'tar czf %.tar.gz % && rm -rf %'
+        run: |
+          mkdir -p build
+          find . -mindepth 1 -type d ! -path "./.git*" ! -path "./build" -print0 | xargs -0 -I % sh -c 'tar czf build/%.tar.gz %'
         shell: bash
 
       - name: Push
@@ -21,6 +23,6 @@ jobs:
         env:
           REPO: self
           BRANCH: build
-          FOLDER: .
+          FOLDER: build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
