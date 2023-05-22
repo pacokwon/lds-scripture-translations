@@ -2,6 +2,8 @@
 
 This repository aims to provide translations of the LDS scripture in various languages.
 
+Although collecting translated scriptures is automated, it requires time and resource. If you need translation for a specific language, please feel free to submit an issue to this repository!
+
 Supported languages are the following:
 
 - [x] `eng` - English,
