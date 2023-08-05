@@ -4,6 +4,8 @@ This repository aims to provide translations of the LDS scripture in various lan
 
 Although collecting translated scriptures is automated, it requires time and resource. If you need translation for a specific language, please feel free to submit an issue to this repository!
 
+In the `build` branch of this repository are `tar.gz` files for each language. The files are named after their three-letter codes (not ISO, the Church uses a different scheme - I'm not aware of it's name). For example, the English translations are compressed in a file called `eng.tar.gz`. So feel free to use them as a static asset.
+
 Supported languages are the following:
 
 - [x] `eng` - English,
